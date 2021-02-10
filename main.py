@@ -45,7 +45,7 @@ def draw_boundaries():
     data = StandardScaler().fit_transform(data)  # Rescale data
 
     viz = DecisionViz(
-        KNeighborsClassifier(1), title="Nearest Neighbors",
+        GaussianNB(), title="Gaussian",
         features=['Sepal Length', 'Sepal Width'], classes=['A', 'B', 'C']  # Determine dimension and no. of classes
     )
     viz.fit(data, label)  # Train data to draw
